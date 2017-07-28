@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="ysdxz207@qq.com" url="http://www.hupubao.win">飞鸿</vendor>
+
+  <description><![CDATA[
+      Toggle camel case with CTRL + SHIFT + X.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="com.puyixiaowo.CamelToggle" text="Toggle Camel Case" description="hello_world to helloWorld and reverse.">
+      <add-to-group group-id="CodeMenu" anchor="last"  />
+      <action id="com.puyixiaowo.cameltoggle.actions.ToggleCamelAction"
+              class="com.puyixiaowo.cameltoggle.actions.ToggleCamelAction"
+              text="Toggle Camel Case"
+              description="hello_world to helloWorld and reverse.">
+        <keyboard-shortcut first-keystroke="control shift x" keymap="$default"/>
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
