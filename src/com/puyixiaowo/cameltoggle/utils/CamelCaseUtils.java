@@ -44,7 +44,7 @@ public class CamelCaseUtils {
             return null;
         }
  
-        s = s.toLowerCase();
+//        s = s.toLowerCase();
  
         StringBuilder sb = new StringBuilder(s.length());
         boolean upperCase = false;
@@ -82,6 +82,6 @@ public class CamelCaseUtils {
         System.out.println(CamelCaseUtils.toUnderlineName("UserID"));
         System.out.println(CamelCaseUtils.toCamelCase("iso_certified_staff"));
         System.out.println(CamelCaseUtils.toCamelCase("certified_staff"));
-        System.out.println(CamelCaseUtils.toCamelCase("user_id"));
+        System.out.println(CamelCaseUtils.toCamelCase("testUser_id"));
     }
 }
