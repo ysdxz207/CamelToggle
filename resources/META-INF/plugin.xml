@@ -1,6 +1,6 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
+  <id>com.puyixiaowo.cameltoggle</id>
+  <name>CamelToggle</name>
   <version>1.0</version>
   <vendor email="ysdxz207@qq.com" url="http://www.hupubao.win">飞鸿</vendor>
 
