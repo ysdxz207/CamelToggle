@@ -25,20 +25,19 @@ public class ToggleCamelAction extends AnAction {
         final Document document = editor.getDocument();
         final SelectionModel selectionModel = editor.getSelectionModel();
 
-        final int start = selectionModel.getSelectionStart();
-        final int end = selectionModel.getSelectionEnd();
+        if (!selectionModel.hasSelection()) {
+            selectionModel.selectWordAtCaret(true);
+        }
+
+        int start = selectionModel.getSelectionStart();
+        int end = selectionModel.getSelectionEnd();
 
         String text = document.getText(new TextRange(start, end));
 
         String replacement = CamelCaseUtils.checkIsCamelCase(text) ? CamelCaseUtils.toUnderlineName(text) :
                 CamelCaseUtils.toCamelCase(text);
         //New instance of Runnable to make a replacement
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                document.replaceString(start, end, replacement);
-            }
-        };
+        Runnable runnable = () -> document.replaceString(start, end, replacement);
         //Making the replacement
         WriteCommandAction.runWriteCommandAction(project, runnable);
         selectionModel.removeSelection();
