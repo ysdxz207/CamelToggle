@@ -2,7 +2,7 @@
   <id>com.puyixiaowo.cameltoggle</id>
   <name>CamelToggle</name>
   <version>1.0</version>
-  <vendor email="ysdxz207@qq.com" url="http://www.hupubao.win">飞鸿</vendor>
+  <vendor email="ysdxz207@qq.com" url="https://github.com/ysdxz207/CamelToggle">飞鸿</vendor>
 
   <description><![CDATA[
       Toggle camel case with CTRL + SHIFT + X.<br>
